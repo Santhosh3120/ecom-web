@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+    align-items: center;
+    color: cornsilk;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+}
+.box{
+    border:2px solid pink ;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ ;
+}
+.status{
+    margin: 10px;
+   font-size: 30px;
+
+}
+#Restart{
+    padding: 10px;
+    width: 150px;
+ background-color:pink;
+ color:black;
+   
+}

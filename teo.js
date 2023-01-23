@@ -1,10 +1,9 @@
 const boxs = document.querySelectorAll('.box');
 const playerStatus = document.querySelector('.status');
-const restartBtn = document.getElementById('#Restart');
+const btnRestart = document.getElementById('#Restart');
 
-let x = "<imag src='download.png'>";
-let o = "<imag src='o.png'>";
-let player=x;
+let x = "<img src='x.jpg'>";
+let o = "<img src='o.jpg'>";
 
 const win = [
     [0,1,2],
@@ -18,26 +17,82 @@ const win = [
 ];
 let options = ["","","","","","","","",""];
 let currentPlayer= x;
+let player="X";
 let running = false;
 
 init();
 
 function init(){
 boxs.forEach(box => box.addEventListener('click',boxClick));
-running:true;
+playerStatus.textContent=`${player}Your Turn`;
+
+running=true;
 }
 function boxClick(){
-console.log(this.dataset.index);
+const index = this.dataset.index;
+if(options[index] != "" || !running){
+    return;
 }
-function updateBox(){
+updateBox(this,index);
+checkWinner();
+}
+
+
+function updateBox(box,index){
+    options[index]=player;
+    box.innerHTML= currentPlayer;
 
 }
-function checkWinners(){
+
+function changePlayer(){
+    player=(player=='X') ? "O" :"X";
+    currentPlayer=(currentPlayer==x) ? o :x;
+    playerStatus.textContent=`${player} Your Turn`;
+}
+
+
+   
+function checkWinner(){
+    let isWon = false;
+    for(let i=0;i<win.length;i++){
+        const condition=win[i];
+        const box1= options[condition[0]];
+        const box2= options[condition[1]];
+        const box3= options[condition[2]];
+ if(box1=="" || box2=="" || box3==""){
+    continue;
+ }
+ if(box1==box2 && box2==box3){
+    isWon=true;
+    boxs[condition[0]].classList.add('win');
+    boxs[condition[1]].classList.add('win');
+    boxs[condition[2]].classList.add('win');
+ }
+if(isWon){
+    playerStatus.textContent=`${player}Won`;
+    
+    running=false;
+    
+}else if(!options.includes("")){
+    playerStatus.textContent=`Game Draw...!`;
+    running=false;
+}else{
+    changePlayer();
+}
+    }
 
 }
 function restartGame(){
+    options=["","","","","","","","",""];
+    currentPlayer=x;
+    player="X";
+    running=true;
+    statusTxt.textContent=`${player} Your Turn`;
+  
+    boxs.forEach(box=>{
+        box.innerHTML="";
+        box.classList.remove('win');
+    });
+  }
 
-}
-function changePlayers(){
 
-}

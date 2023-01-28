@@ -1,0 +1,58 @@
+.{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+   background-color: rgb(255, 255, 255);
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+.container{
+    height: 80vh;
+    width: 20vw;
+   background-color: black;
+    margin-left: 350px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo1{
+    display: flex;
+   margin: 20px;
+   
+}
+.logo1 img{
+margin-top: 30px;
+   height: 50px;
+   width: 50px;
+   margin: 5px;
+}
+.logo{
+    position: relative;
+    margin-bottom: 40px;
+}
+.logo img{
+    height: 200px;
+    width: 200px;
+   
+}
+button{
+    height: 30px;
+    width: 100px;
+    background-color: greenyellow;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    margin-bottom: 80px;
+    color: green;
+    
+}
+    

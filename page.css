@@ -15,6 +15,7 @@ img{
 .container{
     height: 80vh;
     width: 20vw;
+    
    background-color: black;
     margin-left: 350px;
     display: flex;
@@ -55,4 +56,3 @@ button{
     color: green;
     
 }
-    

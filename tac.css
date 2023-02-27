@@ -16,7 +16,7 @@ body{
 .main{
     height: 90vh;
     width: 20vw;
-    background-color: rgb(12, 49, 236);
+    background-color: #031890cc;
     display: flex;
     flex-direction: column;
   justify-content: center;
@@ -26,21 +26,22 @@ body{
     height: 150px;
     width: 150px;
     margin-bottom: 20px;
+
 }
 .container{
     display: grid;
     grid-template-columns: repeat(3,auto);
-    border: 6px solid rgb(251, 251, 251);
-    border-radius: 20px;
-    
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
     margin-bottom: 30px;
 }
 .box{
-    border:1px solid white;
-    border-radius: 3px;
+    border:1px solid rgb(248, 248, 248);
+    border-radius: 1px;
    background-color: black;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,42 +63,53 @@ body{
 }
 .status{
     height: 5%;
-    width: 50%;
+    width: 60%;
     margin: 10px;
     padding: 6px;
+    border-radius: 3px;
    font-size: 15px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: bold;
    text-align: center;
    display: flex;
    flex-direction: column;
-   background-color: black;
-   
+   background-color: rgb(0, 0, 0);
+   color: #ffffff;
+   cursor: default;
 
 }
-.status1{
-    margin: 10px;
-   font-size: 10px;
-   display: flex;
-   flex-direction: column;
-   background-color: black;
-   
-}
+
 #Restart{
     padding: 10px;
-    width: 150px;
- background-color:pink;
- color:black;
-   
+    width: 130px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+ background-color:rgb(185, 172, 172);
+ color:rgb(10, 9, 9);
+ cursor: pointer;
+ border-radius: 5px;
+ box-shadow: #000000;
 }
+   
+ #Restart:hover {
+    box-shadow: none;
+    color: #201e1e;
+    translate: 0 2px;
+  }
 .win{
     animation: winAnimation ease-in-out 1s infinite;
 }
 
 @keyframes winAnimation {
-  0%{background-color: #472c2e;}
-  100%{background-color: #400f0f;}
+  0%{background-color: #818181;}
+  100%{background-color: #000000;}
   
 }
 img{
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
+}
+@keyframes playerWinAnimation {
+    0%{background-color: #fffbfb;}
+    100%{background-color: #e41414;}
 }

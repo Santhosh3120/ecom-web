@@ -84,16 +84,16 @@ body{
     width: 130px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
- background-color:rgb(185, 172, 172);
+ background-color:rgb(208, 229, 255);
  color:rgb(10, 9, 9);
  cursor: pointer;
  border-radius: 5px;
- box-shadow: #000000;
+ box-shadow: #842c2c;
 }
    
  #Restart:hover {
     box-shadow: none;
-    color: #201e1e;
+    color: #7253f9;
     translate: 0 2px;
   }
 .win{

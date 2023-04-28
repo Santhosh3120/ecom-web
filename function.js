@@ -2,7 +2,7 @@ const boxs=document.querySelectorAll('.box');
 const statusTxt=document.querySelector('.status');
 const status1Txt=document.querySelector('.status1');
 const btnRestart=document.querySelector('#Restart');
-let x = "<img src='/img/x2.png'>";
+let x = "<img src='img/x2.png'>";
 let o = "<img src='img/o2.png'>";
 const xWin="<img src='img/xwin.png'>"
 
